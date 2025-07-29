@@ -1,0 +1,26 @@
+---
+sidebar: sidebar 
+permalink: concept_api_versions.html 
+keywords: rest api, deploy rest api, rest, version, versioning 
+summary: ONTAP Select Deploy 隨附的 REST API 已指派一個版本號碼。 API版本號碼與 Deploy 版本號無關。您應該了解您的 Deploy 版本中包含的 API 版本，以及這可能會對您使用該 API 產生的影響。 
+---
+= ONTAP Select Deploy API 版本控制
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+ONTAP Select Deploy 隨附的 REST API 已指派一個版本號碼。 API版本號碼與 Deploy 版本號無關。您應該了解您的 Deploy 版本中包含的 API 版本，以及這可能會對您使用該 API 產生的影響。
+
+Deploy 管理公用程式的目前版本包含 REST API 版本 3。 Deploy實用程式的先前版本包含以下 API 版本：
+
+部署 2.8 及更高版本:: ONTAP Select Deploy 2.8 及所有更高版本均包含 REST API 版本 3。
+部署 2.7.2 及更早版本:: ONTAP Select Deploy 2.7.2 和所有早期版本均包含 REST API 版本 2。
+
+
+
+NOTE: REST API 的版本 2 和 3 不相容。如果您從包含 API 版本 2 的早期版本升級到 Deploy 2.8 或更高版本，則必須更新所有直接存取 API 的現有程式碼以及所有使用命令列介面的腳本。

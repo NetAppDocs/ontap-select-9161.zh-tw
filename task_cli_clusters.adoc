@@ -1,0 +1,36 @@
+---
+sidebar: sidebar 
+permalink: task_cli_clusters.html 
+keywords: administer, administering, cli, clusters 
+summary: 您可以執行多項相關任務來管理ONTAP Select叢集。 
+---
+= ONTAP Select叢集
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以執行多項相關任務來管理ONTAP Select叢集。
+
+
+
+== 刪除ONTAP Select集群
+
+當不再需要ONTAP Select叢集時，您可以使用命令列介面將其刪除。
+
+.關於此任務
+集群必須處於離線狀態。
+
+.步驟
+. 使用管理員帳戶Sign in部署虛擬機器 CLI。
+. 顯示集群狀態： 
+`cluster show -name CLUSTERNAME`
+. 如果叢集未處於離線狀態，則將其移至離線狀態： 
+`cluster offline -name CLUSTERNAME`
+. 確認叢集處於離線狀態後，刪除叢集： 
+`cluster delete -name CLUSTERNAME`
+

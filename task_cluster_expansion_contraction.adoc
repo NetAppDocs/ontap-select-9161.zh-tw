@@ -1,0 +1,120 @@
+---
+sidebar: sidebar 
+permalink: task_cluster_expansion_contraction.html 
+keywords: cluster, expand, expansion, contract, contraction, six, eight, node deployment workflow, workflow, deployment steps 
+summary: 從ONTAP Select 9.15.1 開始，您可以將現有叢集的大小從 6 個節點增加到 8 個節點，也可以將叢集大小從 8 個節點減少到 6 個節點。 
+---
+= 擴展或收縮ONTAP Select集群
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+從ONTAP Select 9.15.1 開始，您可以將現有叢集的大小從 6 個節點增加到 8 個節點，也可以將叢集大小從 8 個節點減少到 6 個節點。
+
+不支援以下集群擴展和收縮：
+
+* 從一個、兩個或四個節點叢集擴展至六個或八個節點叢集。
+* 從六節點或八節點群集收縮為一節點、二節點或四節點群集。
+
+
+[NOTE]
+====
+若要將叢集中的節點數變更為叢集擴充或收縮不支援的大小，您需要執行下列任務：
+
+. 使用link:task_cli_deploy_cluster.html["命令列介面"]或link:task_deploy_cluster.html["網頁使用者介面"]隨ONTAP Select Deploy 管理實用程式一起提供。
+. 如果適用，使用以下方式將資料遷移到新集群link:https://docs.netapp.com/us-en/ontap/data-protection/snapmirror-disaster-recovery-concept.html["SnapMirror複製"^] 。
+
+
+====
+您可以使用 CLI、API 或 Web 介面從ONTAP Select Deploy 啟動叢集擴充和收縮過程。
+
+
+
+== 硬體和儲存注意事項
+
+集群擴展和收縮功能受到以下方面的限制：
+
+* 僅支援在 ESX 虛擬機器管理程式主機上建立的叢集。以下 ESX 版本與ONTAP Select 9.15.1 及更高版本相容：
++
+** ESXi 8.0 U3
+** ESXi 8.0 U2
+** ESXi 8.0 U1
+** ESXi 8.0 正式版
+** ESXi 7.0 U3
+** ESXi 7.0
+
+
+
+
+
+
+== 擴展集群
+
+您可以使用叢集擴展功能將現有叢集的大小從六節點叢集增加到八節點叢集。
+
+.關於此任務
+在準備叢集擴展過程時，新的 ESX 主機被加入到清單中，並分配新節點的詳細資訊。在開始叢集擴展程序之前，網路預檢查會驗證所選的內部網路。
+
+.開始之前
+* 部署多節點叢集時，您應該熟悉網路連線檢查器。您可以使用link:task_adm_connectivity.html["網頁使用者介面"]或link:task_cli_connectivity.html["命令列介面"] 。
+* 驗證您是否擁有新節點的許可證詳細資訊。
+
+
+.步驟
+. 使用管理員帳戶Sign in部署公用程式 Web 使用者介面。
+. 選擇頁面頂部的“*Cluster*”選項卡，然後從清單中選擇所需的叢集。
+. 在集群詳情頁面，選擇頁面右側的齒輪圖標，然後選擇*展開集群*。
+. 導航至 *HA Pair 4* 部分。
+. 選擇第四個 HA 對的高可用性 (HA) 對配置詳細信息，包括：
++
+** 實例類型
+** 節點名稱
+** 關聯的虛擬機器管理程式主機
+** 節點 IP 位址
+** 許可證
+** 網路設定
+** 儲存配置（RAID 類型和儲存池）
+
+
+. 選擇“儲存 HA 對”以儲存配置詳細資訊。
+. 提供ONTAP憑證，然後選擇*擴展叢集*。
+. 選擇“*下一步*”，然後選擇“*運行*”運行網路預檢查。
++
+網路預檢查驗證為ONTAP叢集流量選擇的內部網路是否正常運作。
+
+. 選擇「*擴展集群*」開始集群擴展過程，然後在對話方塊中選擇「*確定*」。
++
+集群擴展最多可能需要 45 分鐘。
+
+. 監控多步驟叢集擴展過程，以確認叢集擴展成功。
+. 請參閱「事件」選項卡，以了解操作進度的定期更新。該頁面會定期自動刷新。
+
+
+.完成後
+擴展叢集後，您應該備份ONTAP Select Deploy 配置資料。
+
+
+
+== 收縮集群
+
+您可以使用群集收縮功能將現有群集的大小從八節點群集減少到六節點群集。
+
+.關於此任務
+在此過程中，選擇集群中所需的 HA 節點對，為集群收縮做準備。
+
+.步驟
+. 使用管理員帳戶Sign in部署公用程式 Web 使用者介面。
+. 選擇頁面頂部的“*Cluster*”選項卡，然後從清單中選擇所需的叢集。
+. 在集群詳情頁面，選擇頁面右側的齒輪圖標，然後選擇*Contract Cluster*。
+. 選擇要刪除的任何 HA 對的 HA 對配置詳細資訊並提供ONTAP憑證，然後選擇 *Contract Cluster*。
++
+集群收縮可能需要 30 分鐘。
+
+. 監控多步驟集群收縮過程，確認集群收縮成功。
+. 請參閱「事件」選項卡，以了解操作進度的定期更新。該頁面會定期自動刷新。
+
