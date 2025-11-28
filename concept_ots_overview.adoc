@@ -127,6 +127,7 @@ NOTE: 從ONTAP Select 9.16.1 開始，支援手動更新 ARP，並且 ARP 功能
 * 服務處理器
 * SVM 遷移
 * SnapLock Compliance
+* SnapMirror主動同步
 * VMware HCX
 
 

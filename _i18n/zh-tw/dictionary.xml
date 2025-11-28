@@ -3850,4 +3850,5 @@
   <block id="1c5ffa58ac07641f5cec5616c07b2ba2" category="sidebar">新增ONTAP Select映像</block>
   <block id="0a15f7ba73868a32304fdf52855463c9" category="sidebar">刪除ONTAP Select映像</block>
   <block id="afc9d68a1be701598b5ef94dc0be2844" category="sidebar">恢復雙節點叢集的部署</block>
+  <block id="c0b79db5f258f0c991a383cbdbf001dd" category="list-text">SnapMirror主動同步</block>
 </blocks>
