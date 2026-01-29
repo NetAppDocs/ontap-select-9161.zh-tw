@@ -173,10 +173,7 @@ NOTE: 基於核心的虛擬機器 (KVM) 不支援在 SW-RAID 配置中使用大�
 2+| 虛擬機器管理程序支援 (VMware) 3+| VMware vSphere 7.0GA 及更新 1 至 3C VMware vSphere 8.0GA 及更新 1 至 3 
 
 
-2+| 虛擬機器管理程式支援 (KVM) 3+| RedHat Enterprise Linux 64 位元 (KVM) 9.5、9.4、9.3、9.2、9.1、9.0、8.9、8.8、8.7 和 8.6 Rocky Linux (KVM) 9 和 8 
-
-
-2+| 管理軟體 3+| NetApp Active IQ Unified Manager管理套件ONTAP Select Deploy Utility SnapCenter （選購） 
+2+| 虛擬機器管理程式支援 (KVM) 3+| RedHat Enterprise Linux 64 位元 (KVM) 9.5、9.4、9.3、9.2、9.1、9.0、8.9、8.8、8.7 和 8.6 Rocky Linux (KVM) Rocky Linux 上的 KVM 9.5、9.4、9.3、9.2、9.1、9.0、8.9、8.8、8.7 和 8.6 
 |===
 --
 ====

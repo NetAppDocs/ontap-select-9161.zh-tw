@@ -592,9 +592,6 @@
   <block id="9295b1d52d6b9b34b829dfb4fabf6d05" category="cell">虛擬機器管理程序支援 (VMware)</block>
   <block id="4a9dffc4c71f7a56c8a8d9b0e4381f90" category="cell">VMware vSphere 7.0GA 及更新 1 至 3C VMware vSphere 8.0GA 及更新 1 至 3</block>
   <block id="4f17c009683074f845007741fa1c26dd" category="cell">虛擬機器管理程式支援 (KVM)</block>
-  <block id="e12f83762dfb76b01ed77a9370b24967" category="cell">RedHat Enterprise Linux 64 位元 (KVM) 9.5、9.4、9.3、9.2、9.1、9.0、8.9、8.8、8.7 和 8.6 Rocky Linux (KVM) 9 和 8</block>
-  <block id="049f7d1a5b523b8230ca21c727474d11" category="cell">管理軟體</block>
-  <block id="f1680d42c94acc804fddda46a7e4602d" category="cell">NetApp Active IQ Unified Manager管理套件ONTAP Select Deploy Utility SnapCenter （選購）</block>
   <block id="bbf6609978bbf45921ea0dae059fde72" category="inline-link-macro">了解容量層和容量池許可證類型</block>
   <block id="10aa5d1416b41ba5cd05d276a6c13328" category="paragraph"><block ref="6799f681592f9a0a7cf264c2b7bcd3d7" category="inline-link-macro-rx"></block> 。</block>
   <block id="91d83e84a03b1a016f22b6743fa4a929" category="summary">確定ONTAP Select適合您的組織後，您可以購買支援生產部署所需的授權。您必須選擇「容量層」或「容量池」授權模式以及每個部署的儲存容量。</block>
@@ -3851,4 +3848,5 @@
   <block id="0a15f7ba73868a32304fdf52855463c9" category="sidebar">刪除ONTAP Select映像</block>
   <block id="afc9d68a1be701598b5ef94dc0be2844" category="sidebar">恢復雙節點叢集的部署</block>
   <block id="c0b79db5f258f0c991a383cbdbf001dd" category="list-text">SnapMirror主動同步</block>
+  <block id="2d5784f9c17fd802542d0f0e9599f955" category="cell">RedHat Enterprise Linux 64 位元 (KVM) 9.5、9.4、9.3、9.2、9.1、9.0、8.9、8.8、8.7 和 8.6 Rocky Linux (KVM) Rocky Linux 上的 KVM 9.5、9.4、9.3、9.2、9.1、9.0、8.9、8.8、8.7 和 8.6</block>
 </blocks>
