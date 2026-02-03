@@ -14,48 +14,44 @@ summary: 您可以使用命令列介面就地升級現有的 Deploy 實用程式
 
 
 [role="lead"]
-您可以使用命令列介面就地升級現有的 Deploy 實用程式虛擬機器。
+使用 ONTAP Select Deploy 實用程式 CLI 就地升級現有的 ONTAP Select Deploy 實用程式虛擬機器。
 
-
-
-== 開始之前
-
-確保升級期間不會使用 Deploy 執行任何其他任務。有關升級 Deploy 實用程式的資訊和限制，請參閱目前發行說明。
+.開始之前
+確認在升級過程中 ONTAP Select Deploy 未執行任何其他任務。有關升級 ONTAP Select Deploy 實用程式的相關資訊和限制，請參閱link:reference_release_notes.html["發行說明"]。
 
 
 NOTE: 如果您安裝了ONTAP Select Deploy 管理公用程式的舊實例，則應升級至目前版本。 ONTAPONTAP Select節點和ONTAP Select Deploy 元件將單獨升級。請參閱link:concept_adm_upgrading_nodes.html["升級ONTAP Select節點"^]了解更多詳情。
 
 
 
-== 下載升級包
+== 步驟 1：下載升級套件
 
-要開始升級過程，您必須從NetApp支援網站下載對應的 Deploy 虛擬機器升級檔案。升級包格式為單一壓縮檔。
+若要開始升級過程，請從 NetApp 支援網站下載 ONTAP Select Deploy 升級檔案。升級套件以單一壓縮檔案的形式提供。
 
 .步驟
-. 訪問link:https://mysupport.netapp.com/site/["NetApp支援站點"^]使用網頁瀏覽器並從下載選單中選擇*下載*。
-. 向下捲動並選擇 * ONTAP Select Deploy Upgrade*。
-. 選擇所需的升級包版本。
+. 存取 link:https://mysupport.netapp.com/site/downloads/["NetApp 支援網站下載"^] 頁面。
+. 向下捲動並選擇 *ONTAP Select Deploy*。
+. 選擇所需的 ONTAP Select 版本。
 . 查看最終用戶許可協議 (EULA) 並選擇*接受並繼續*。
-. 選擇並下載適當的包，根據您的環境需求回應所有提示。
+. 選擇並下載適當的 *ONTAP Select Deploy Upgrade* 套件。視需要回應所有提示。
 
 
 
 
-== 將套件上傳到 Deploy 虛擬機
+== 步驟 2：將套件上傳至 ONTAP Select Deploy 虛擬機器
 
-取得升級包後，必須將檔案上傳到Deploy虛擬機器。
+下載軟體包後，您需要將檔案上傳到 ONTAP Select Deploy 虛擬機器。
 
 .開始之前
-您必須在本機工作站上準備好升級檔案。您還必須知道管理員使用者帳戶的密碼。
+* 確認升級檔案可在本機工作站上使用。
+* 請確認您擁有管理員使用者帳號的密碼。
+
 
 .關於此任務
-此任務描述了將檔案上傳到 Deploy 虛擬機器的一種方法。可能還有其他更適合您環境的選項。
+本任務介紹了一種將檔案上傳到 ONTAP Select Deploy 虛擬機器的方法。可能還有其他更適合您環境的選項。
 
 .步驟
-. 在本機工作站的命令 shell 中，使用 scp 公用程式將映像檔上傳到 Deploy 虛擬機器。
-+
-例子
-
+. 在本機工作站的命令 shell 中，使用 `scp`（Secure Copy Protocol）公用程式將映像檔上傳到 ONTAP Select Deploy 虛擬機器，如下列範例所示：
 +
 ....
 scp ONTAPdeploy2.12_upgrade.tar.gz admin@10.228.162.221:/home/admin (provide password when prompted)
@@ -67,21 +63,25 @@ scp ONTAPdeploy2.12_upgrade.tar.gz admin@10.228.162.221:/home/admin (provide pas
 
 
 
-== 應用程式升級包
+== 步驟 3：套用升級套件
 
-將升級檔案上傳到 Deploy 虛擬機器後，即可套用升級。
+將升級檔案上傳到 ONTAP Select Deploy 虛擬機器後，即可套用升級。
 
 .開始之前
-您必須知道升級檔案在 Deploy 實用程式虛擬機器中的哪個目錄中。此外，請確保在升級過程中未使用 Deploy 執行任何其他任務。
+* 確認升級檔案在 ONTAP Select Deploy 公用程式虛擬機器中的放置目錄。
+* 確認在執行升級時，ONTAP Select Deploy 未用於執行任何其他任務。
+
 
 .步驟
-. 使用管理員帳戶透過 SSHSign inDeploy 實用程式 CLI。
+. 使用管理員帳戶透過 SSH Sign in ONTAP Select Deploy 實用程式 CLI。
 . 使用適當的目錄路徑和檔案名稱執行升級：
 +
-`deploy upgrade -package-path FILEPATH`
-
+[source, cli]
+----
+deploy upgrade -package-path <file_path>
+----
 +
-例子
+範例命令：
 
 +
 ....
@@ -90,4 +90,4 @@ deploy upgrade -package-path /home/admin/ONTAPdeploy2.12_upgrade.tar.gz
 
 
 .完成後
-在升級程序完成之前，系統會要求您建立 Deploy 虛擬機器配置的備份。此外，您還應清除瀏覽器快取，以便查看新建立的 Deploy 頁面。
+升級程序完成前，系統會提示您建立 ONTAP Select Deploy 虛擬機器組態的備份。此外，您還應該清除瀏覽器快取，以便檢視新建立的 ONTAP Select Deploy 頁面。
