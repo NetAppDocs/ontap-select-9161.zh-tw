@@ -29,6 +29,9 @@ ONTAP Select支援以下ONTAP功能，並且預設獲得許可：
 * CIFS
 * 重複資料刪除和壓縮
 * FlexCache
++
+ONTAP Select 對 FlexCache 回寫功能的支援有一些限制。如需更多資訊，請參閱link:https://docs.netapp.com/us-en/ontap-select/concept_ots_overview.html#flexcache-write-back-with-ontap-select["FlexCache 使用 ONTAP Select 進行回寫"^]。
+
 * FlexClone
 * iSCSI
 * NDMP
