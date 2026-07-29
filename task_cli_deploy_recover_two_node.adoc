@@ -18,6 +18,7 @@ summary: 如果ONTAP Select Deploy 實用程式因某種原因發生故障或不
 
 
 
+[[before-you-begin]]
 == 開始之前
 
 在嘗試還原 Deploy 實用程式實例之前，您應該做好準備以確保成功。
@@ -58,6 +59,7 @@ summary: 如果ONTAP Select Deploy 實用程式因某種原因發生故障或不
 |===
 
 
+[[restore-a-deploy-utility-instance-using-a-configuration-backup]]
 == 使用設定備份還原 Deploy 實用程式實例
 
 如果您擁有包含雙節點叢集的故障 Deploy 公用程式執行個體的備份，則可以將設定資料還原到新的 Deploy 虛擬機器執行個體。然後，您必須透過對ONTAP Select叢集中的兩個節點執行額外的配置來完成復原。
@@ -119,6 +121,7 @@ disk assign -disk <mediator-disk2-name> -owner <node2-name>
 
 
 
+[[reconfigure-and-recover-a-deploy-utility-instance]]
 == 重新配置並還原 Deploy 實用程式實例
 
 如果您沒有包含雙節點叢集的故障 Deploy 公用程式執行個體的備份，則必須在新的 Deploy 虛擬機器中設定調解器 iSCSI 目標和郵件信箱。然後，您必須透過對ONTAP Select叢集中的兩個節點執行額外配置來完成復原。

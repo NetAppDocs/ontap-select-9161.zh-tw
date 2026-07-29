@@ -21,6 +21,7 @@ CAUTION: 除非NetApp支援人員指示，否則不應直接修改ONTAP Select�
 
 
 
+[[hypervisor-independent]]
 == 獨立於虛擬機器管理程序
 
 ONTAP Select和ONTAP Select Deploy 管理實用程式皆獨立於虛擬機器管理程式。
@@ -64,6 +65,7 @@ ONTAP Select叢集中的所有主機必須執行相同版本的虛擬機器管�
 
 
 
+[[vmware-hypervisor-environment]]
 == VMware 虛擬機器管理程式環境
 
 在 VMware 環境中安裝ONTAP Select Deploy 實用程式之前，您應該考慮 VMware 環境特有的幾個要求和限制。

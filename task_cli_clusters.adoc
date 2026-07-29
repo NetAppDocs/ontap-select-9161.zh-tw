@@ -18,6 +18,7 @@ summary: 您可以執行多項相關任務來管理ONTAP Select叢集。
 
 
 
+[[delete-an-ontap-select-clusters]]
 == 刪除ONTAP Select集群
 
 當不再需要ONTAP Select叢集時，您可以使用命令列介面將其刪除。

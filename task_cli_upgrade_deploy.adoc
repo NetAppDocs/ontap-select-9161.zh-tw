@@ -18,6 +18,7 @@ summary: 您可以使用命令列介面就地升級現有的 Deploy 實用程式
 
 
 
+[[before-you-begin]]
 == 開始之前
 
 請確保在升級過程中不要使用 Deploy 執行任何其他任務。有關升級 Deploy 實用程式的資訊和限制，請參閱目前的發行說明。
@@ -27,6 +28,7 @@ NOTE: 如果您安裝了ONTAP Select Deploy 管理公用程式的舊實例，則
 
 
 
+[[download-the-upgrade-package]]
 == 下載升級套件
 
 要開始升級過程，您必須從 NetApp Support Site 下載適當的 Deploy 虛擬機器升級檔案。升級套件的格式為單一壓縮檔案。
@@ -41,6 +43,7 @@ NOTE: 如果您安裝了ONTAP Select Deploy 管理公用程式的舊實例，則
 
 
 
+[[upload-the-package-to-the-deploy-virtual-machine]]
 == 將軟體包上傳到 Deploy 虛擬機器
 
 取得升級套件後，您必須將檔案上傳至 Deploy 虛擬機器。
@@ -67,6 +70,7 @@ scp ONTAPdeploy2.12_upgrade.tar.gz admin@10.228.162.221:/home/admin (provide pas
 
 
 
+[[apply-the-upgrade-package]]
 == 套用升級套件
 
 將升級檔案上傳到 Deploy 虛擬機器後，即可套用升級。
