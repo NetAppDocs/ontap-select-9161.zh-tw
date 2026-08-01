@@ -214,6 +214,6 @@ disk assign -disk <mediator-disk2-name> -owner <node2-name>
 
 .相關資訊
 * link:task_install_deploy.html["安裝ONTAP Select Deploy"]
-* link:task_cli_migrate_deploy.html#restoring-the-deploy-configuration-data-to-the-new-virtual-machine["將 Deploy 設定資料還原到新的虛擬機"]
-* link:task_adm_licenses.html#reinstalling-a-capacity-pool-license["重新安裝容量池許可證"]
+* link:task_cli_migrate_deploy.html#restore-the-deploy-configuration-data-to-the-new-virtual-machine["將 Deploy 設定資料還原到新的虛擬機"]
+* link:task_adm_licenses.html#reinstall-a-capacity-pool-license["重新安裝容量池許可證"]
 

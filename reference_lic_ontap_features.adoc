@@ -72,6 +72,6 @@ NOTE: ONTAP Select支援將 SVM DR 作為來源和目標，最多可建立 16 �
 NOTE: 使用StorageGRID時不需要FabricPool許可證。
 
 .相關資訊
-* link:concept_ots_overview.html#comparing-ontap-select-and-ontap-9["ONTAP Select與ONTAP 9 的比較"]
+* link:concept_ots_overview.html#compare-ontap-select-and-ontap-9["ONTAP Select與ONTAP 9 的比較"]
 * link:https://mysupport.netapp.com/site/systems/master-license-keys["NetApp ONTAP主授權金鑰"^]
 

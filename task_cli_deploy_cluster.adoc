@@ -30,12 +30,12 @@ summary: 您可以使用ONTAP Select Deploy 管理公用程式提供的命令列
 ====
 .硬體 RAID
 --
-如果使用本機硬體 RAID 控制器，則必須至少建立一個資料儲存區 (ESX) 或一個link:reference_chk_host_prep.html#create-storage-pool["儲存池（KVM）"]在每個節點上，為系統資料以及根聚合和資料聚合建立儲存池。您必須在配置ONTAP Select節點的過程中連接儲存池。
+如果使用本機硬體 RAID 控制器，則必須在每個節點上至少建立一個資料儲存區 （ESX） 或一個link:kvm-host-configuration-and-preparation-checklist.html#create-storage-pool["儲存池（KVM）"]，用於系統資料以及根目錄和資料集合體。您必須在設定 ONTAP Select 節點時附加儲存資源池。
 
 --
 .軟體 RAID
 --
-如果使用軟體 RAID，則必須建立至少一個資料儲存區 (ESX) 或一個link:reference_chk_host_prep.html#create-storage-pool["儲存池（KVM）"]用於系統數據，並確保 SSD 驅動器可用於根聚合和數據聚合。您必須在配置ONTAP Select節點的過程中連接儲存池和磁碟。
+如果使用軟體 RAID，則必須至少建立一個資料儲存區（ESX）或一個link:kvm-host-configuration-and-preparation-checklist.html#create-storage-pool["儲存池（KVM）"]用於儲存系統資料，並確保 SSD 磁碟機可用於根目錄和資料集合體。您必須在設定 ONTAP Select 節點時附加儲存資源池和磁碟。
 
 --
 ====

@@ -1530,7 +1530,6 @@
   <block id="bbe48fb854ea022537208eeeff822f91" category="list-title">關於此任務</block>
   <block id="f9f5faecdbf3b023cf5652fa18b8c4ee" category="list-text">您不需要從NetApp取得序號或儲存容量許可證。</block>
   <block id="591ba54105fed20bc4bc8e31cee68eb3" category="list-text">您可以為使用者資料分配與購買的許可證相同數量的儲存空間。</block>
-  <block id="10db4e06bde0886ecc0f97ce3a350d45" category="list-text">您無法將節點從評估許可證升級到購買許可證。</block>
   <block id="de68e769353f85803d50af3ad5192201" category="list-text">您只能使用 vCenter 帳戶部署 OVF 範本。目前不支援直接安裝到 ESXi 主機。</block>
   <block id="3becac3f3a46d46f0df7e4df7b69a359" category="list-text">您必須使用 vSphere 獨立用戶端或 vSphere Web 用戶端（ESXi 6.5 及更高版本的唯一選項）安裝 OVF 範本（包含在 ova 檔案中）。請勿使用ONTAP Select Deploy 管理實用程式。</block>
   <block id="324b9a453c1c067658adca4be37dbae0" category="section-title">準備ONTAP Select集群主機</block>
@@ -2079,7 +2078,6 @@
   <block id="690f3dfc132299176ff75952d43e8d9d" category="list-text">防篡改快照副本</block>
   <block id="d8d124daaa3196fc86bdde707e37359d" category="admonition">使用StorageGRID時不需要FabricPool許可證。</block>
   <block id="c3c1ba002ed4d0d1ae23559793a734bd" category="inline-link-macro">ONTAP Select與ONTAP 9 的比較</block>
-  <block id="77aaedb7dde5f69b11a5683a958edbfc" category="list-text"><block ref="77aaedb7dde5f69b11a5683a958edbfc" category="inline-link-macro-rx"></block></block>
   <block id="ffa1963f0d0a25dfc04554dbe791a3b1" category="inline-link-macro">NetApp ONTAP主授權金鑰</block>
   <block id="16f9dd2af311dfdedd3814899d379c54" category="list-text"><block ref="16f9dd2af311dfdedd3814899d379c54" category="inline-link-macro-rx"></block></block>
   <block id="3c5bdd4a077d520c4b4870fb15f37d1b" category="summary">目前版本包括幾個特定於ONTAP Select 的新功能或改進。</block>
@@ -3155,8 +3153,6 @@
   <block id="6f78f7cef2637ad960245873ccb009cc" category="list-text">準備將儲存連接到ONTAP Select節點</block>
   <block id="14ce7f56600ce32dd333637eed98cd8f" category="open-title">硬體 RAID</block>
   <block id="66ef34be992df3691380b5f366935c14" category="inline-link-macro">儲存池（KVM）</block>
-  <block id="e6590b92b825641d452dbbfa0d4cf1d1" category="paragraph">如果使用本機硬體 RAID 控制器，則必須至少建立一個資料儲存區 (ESX) 或一個<block ref="a828881b33208a7c4812d178d14998a2" category="inline-link-macro-rx"></block>在每個節點上，為系統資料以及根聚合和資料聚合建立儲存池。您必須在配置ONTAP Select節點的過程中連接儲存池。</block>
-  <block id="19d8e46deea8d239f3274a92f88038ab" category="paragraph">如果使用軟體 RAID，則必須建立至少一個資料儲存區 (ESX) 或一個<block ref="a828881b33208a7c4812d178d14998a2" category="inline-link-macro-rx"></block>用於系統數據，並確保 SSD 驅動器可用於根聚合和數據聚合。您必須在配置ONTAP Select節點的過程中連接儲存池和磁碟。</block>
   <block id="d5ba525828b35ea241ddabb08b074ffd" category="list-text">可用的ONTAP Select版本</block>
   <block id="908272d4cd58c61b9a3bc042f376ee86" category="inline-link-macro">新增ONTAP Select映像</block>
   <block id="e037f6aae5e648de44fa07863c350701" category="paragraph">Deploy 管理實用程式僅包含一個版本的ONTAP Select。如果您要使用早期版本的ONTAP Select部署集群，則必須先<block ref="6403b9b63d70488e119e79bd63bd10d8" category="inline-link-macro-rx"></block>到您的 Deploy 實例。</block>
@@ -3322,8 +3318,6 @@
   <block id="6bf206aa142c608ffc9dfde649825ec0" category="inline-link-macro">安裝ONTAP Select Deploy</block>
   <block id="06a53967f62b6ebf8a1fba55cabdfecf" category="list-text"><block ref="06a53967f62b6ebf8a1fba55cabdfecf" category="inline-link-macro-rx"></block></block>
   <block id="89ac05efab2228e74e12191efccdf85c" category="inline-link-macro">將 Deploy 設定資料還原到新的虛擬機</block>
-  <block id="9731a2aaf926f5fd46b5a7343839efb4" category="list-text"><block ref="9731a2aaf926f5fd46b5a7343839efb4" category="inline-link-macro-rx"></block></block>
-  <block id="907984c60dd3b3b1d06b28812739f3a3" category="list-text"><block ref="907984c60dd3b3b1d06b28812739f3a3" category="inline-link-macro-rx"></block></block>
   <block id="010b1bb88703436584f35ee315ce708a" category="summary">您可以使用命令列介面將 Deploy 管理公用程式的現有實例遷移到新的虛擬機器。</block>
   <block id="e3bfc1919cc23daba80c8010e3175d9c" category="doc">將ONTAP Select Deploy 實例遷移到新的虛擬機</block>
   <block id="55327b42261932bc23e2c7dff5397072" category="paragraph">此過程是基於建立一個使用原始虛擬機器配置資料的新虛擬機器。新虛擬機器和原始虛擬機器必須執行相同版本和發行版的 Deploy 實用程式。您無法遷移到其他版本和發行版的 Deploy 實用程式。</block>
@@ -3830,4 +3824,9 @@
   <block id="03cb40fe1372475f8e49ebd07e5d2d9c" category="admonition">VMFS 開銷不為零（VMware KB 1001618），嘗試使用資料儲存報告的整個可用空間會導致叢集建立作業期間出現虛假錯誤。</block>
   <block id="02eaca23acd9bd60cfee240891736083" category="inline-link-macro">FlexCache 使用 ONTAP Select 進行回寫</block>
   <block id="829a60be78f33e711c960543ff962d08" category="paragraph">ONTAP Select 對 FlexCache 回寫功能的支援有一些限制。如需更多資訊，請參閱<block ref="43b5c38e400537347d857d4ad7b2dd01" category="inline-link-macro-rx"></block>。</block>
+  <block id="6e1243914ebc1fc5867ce44540c39b39" category="list-text"><block ref="6e1243914ebc1fc5867ce44540c39b39" category="inline-link-macro-rx"></block></block>
+  <block id="71899ba242d53dc1852e2afd35f4bf4a" category="paragraph">如果使用本機硬體 RAID 控制器，則必須在每個節點上至少建立一個資料儲存區 （ESX） 或一個<block ref="91f06d9f052d8b4c88dd49c62ddbf249" category="inline-link-macro-rx"></block>，用於系統資料以及根目錄和資料集合體。您必須在設定 ONTAP Select 節點時附加儲存資源池。</block>
+  <block id="2ce8ff0e84e7712b0b593cd8a3d974aa" category="paragraph">如果使用軟體 RAID，則必須至少建立一個資料儲存區（ESX）或一個<block ref="91f06d9f052d8b4c88dd49c62ddbf249" category="inline-link-macro-rx"></block>用於儲存系統資料，並確保 SSD 磁碟機可用於根目錄和資料集合體。您必須在設定 ONTAP Select 節點時附加儲存資源池和磁碟。</block>
+  <block id="a8038442da6adccc95dc96f901c895e3" category="list-text"><block ref="a8038442da6adccc95dc96f901c895e3" category="inline-link-macro-rx"></block></block>
+  <block id="241b4315fc3c4e6905896340939f6270" category="list-text"><block ref="241b4315fc3c4e6905896340939f6270" category="inline-link-macro-rx"></block></block>
 </blocks>
